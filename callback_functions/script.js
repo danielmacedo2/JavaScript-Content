@@ -1,13 +1,17 @@
-function sum(a, b) {
+function show(num) {
+    console.log("A operação resultou em: " + num)
+}
+
+function sum(a, b, callback) {
     var operation = a + b;
-    console.log('A + B é igual a ' + operation)
+    callback(operation)
 }
 
-function multiplication(a, b) {
+function multiplication(a, b, cb) {
     var op = a * b;
-    console.log(`${a} X ${b} = ${op}`)
+    cb(op)
 }
 
-sum(2, 5);
+sum(2, 5, show);
 
-multiplication(5, 10)
+multiplication(5, 10, show)
