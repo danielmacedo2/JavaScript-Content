@@ -39,3 +39,13 @@ const hasFour = numbers.includes(4);
 console.log(hasFour);
 
 console.log(numbers.includes(21));
+
+// 5 - map
+data.map((user) => user.newsletter = false)
+
+console.log(data)
+
+// 6 - filter
+const drivers = data.filter((user) => user.driverLicense)
+
+console.log(drivers)
