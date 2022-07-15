@@ -8,9 +8,14 @@ const data = [
 
 // 1 - Reverse
 const reverseData  = data.reverse()
-
 const jsonReverseData = JSON.stringify(reverseData)
 
 console.log(reverseData)
-
 console.log("Data reverse: (JSON.stringify)" + jsonReverseData)
+
+// 2 - find
+const highSallary = 5000
+
+const highestSallary = data.find((user) => user.sallary > highSallary)
+
+console.log(highestSallary);
