@@ -49,3 +49,42 @@ console.log(data)
 const drivers = data.filter((user) => user.driverLicense)
 
 console.log(drivers)
+
+// 7 - reduce
+const sallariesSum = data.reduce((totalSallary, user) => (totalSallary += user.sallary), 0);
+
+console.log("Sallaries sum = " + sallariesSum)
+
+// 8 - forEach
+const showUserNames = (users) => {
+    users.forEach((user) => {
+        console.log(`Olá ${user.name}`)
+    })
+}
+
+showUserNames(data)
+
+// 9 - some
+let someoneWithNewsletter = data.some((user) => user.newsletter)
+
+
+console.log(someoneWithNewsletter);
+
+data[0].newsletter = true
+
+someoneWithNewsletter = data.some((user) => user.newsletter)
+
+console.log(someoneWithNewsletter);
+
+// 10 - every
+
+const everyUserHasName = data.every((user) => user.name);
+
+console.log(everyUserHasName);
+
+const everyUserHasGoodSallary = data.every((user) => {
+    return user.sallary > 2000;
+})
+    
+
+console.log(everyUserHasGoodSallary);
