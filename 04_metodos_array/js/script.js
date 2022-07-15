@@ -19,3 +19,12 @@ const highSallary = 5000
 const highestSallary = data.find((user) => user.sallary > highSallary)
 
 console.log(highestSallary);
+
+// 3 - findIndex
+const lowestSallary = data.findIndex((user) => user.sallary > 0 && user.sallary < 2000)
+
+console.log(lowestSallary)
+
+data[lowestSallary].sallary += 200;
+
+console.log(data);
